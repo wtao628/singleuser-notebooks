@@ -7,10 +7,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 USER root
 
 # Set up JupyterHub
-RUN apt update \
-    && apt upgrade -y \
-    && apt install -y --no-install-recommends python3 python3-pip \
-    && apt clean \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends python3 python3-pip \
+    && apt-get clean \
     && python3 -m pip install -U pip setuptools \
     && python3 -m pip install "jupyterhub==4.*" jupyterlab "notebook==7.*" \
     && mkdir /srv/jupyterhub \
