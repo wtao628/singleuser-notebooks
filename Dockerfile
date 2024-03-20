@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-ARG USER=ubuntu
+ARG USER=linux
 
 ENV DEBIAN_FRONTEND=noninteractive
 
